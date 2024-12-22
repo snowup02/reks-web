@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>REX WEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-image"></div>
+
+   
+
+    <div class="top-right-socials">
+        <a><img src="images/soccii.gif" alt=""></a>
+    </div>
+
+    <div class="top-right-dc">
+        <a><img src="images/DCCCC.webp" alt=""></a>
+    </div>
+    <div class="top-right-dc-m">
+        <a><img src="images/DCCCC.webp" alt=""></a>
+    </div>
+    <div class="top-right-x">
+        <a href="https://x.com/reksonada" target="_blank"><img src="images/tunaynax.png" alt=""></a>
+    </div>
+    <div class="top-right-x-m">
+        <a href="https://x.com/reksonada" target="_blank"><img src="images/tunaynax.png" alt=""></a>
+    </div>
+    <div class="top-right-tg">
+        <a><img src="images/tele.png" alt=""></a>
+    </div>
+    <div class="top-right-tg-m">
+        <a><img src="images/tele.png" alt=""></a>
+    </div>
+
+    <div class="center">
+        <img src="images/REKS FIRE.png" alt="">
+    </div>
+    
+    <div class="center-fish">
+        <img src="images/REKS FISH.png" alt="">
+    </div>
+    
+    <div class="center-sign">
+        <img src="images/REKS SIGN.png" alt="">
+    </div>
+    
+    
+    <div class="center-rex">
+        <img src="images/REKS EGG.png" alt="">
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <button class="close-btn">x</button>
+            <p>You clicked me!</p>
+        </div>
+    </div>
+
+    <div class="smoke">
+        <img src="images/smoke.gif" alt="">
+    </div>
+    
+</body>
+
+<h1></h1>
+
+
+<script>
+
+
+// Ensure the modal is hidden when the page first loads
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'none';  // Ensure modal is hidden initially
+});
+
+const centerImage = document.querySelector('.center');
+const centerFishImage = document.querySelector('.center-fish');
+const centerSignImage = document.querySelector('.center-sign');
+const centerRexImage = document.querySelector('.center-rex');
+const modal = document.querySelector('.modal');
+const closeBtn = document.querySelector('.close-btn');
+
+// Add a click event listener to the center image
+centerImage.addEventListener('click', () => {
+    modal.style.display = 'flex';  // Show modal when image clicked
+});
+
+// Add a click event listener to the center-fish image
+centerFishImage.addEventListener('click', () => {
+    modal.style.display = 'flex';  // Show modal when fish image clicked
+});
+
+// Add a click event listener to the center-sign image
+centerSignImage.addEventListener('click', () => {
+    modal.style.display = 'flex';  // Show modal when sign image clicked
+});
+
+// Add a click event listener to the center-rex image
+centerRexImage.addEventListener('click', () => {
+    modal.style.display = 'flex';  // Show modal when rex image clicked
+});
+
+// Close the modal when clicking anywhere on the background
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';  // Close modal when clicking outside the content
+    }
+});
+
+// Close the modal when clicking the close button
+closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();  // Prevent event bubbling
+    modal.style.display = 'none';  // Close modal when the close button is clicked
+});
+
+</script>
+
+
+</html>
